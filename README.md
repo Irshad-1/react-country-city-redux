@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Video Link Explaining product
+
+(https://drive.google.com/file/d/12Fp49OE7sbXaD4szZPxllE2lPR-wD8Pk/view?usp=sharing)
+
+### Deployed Website Link
+
+(https://country-population.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:

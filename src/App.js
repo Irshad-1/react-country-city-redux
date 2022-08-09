@@ -1,40 +1,24 @@
 import React from 'react';
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
+  theme
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { Routes, Route } from 'react-router-dom';
+import { TableComponent } from "./Components/TableComponent";
+import { AddCityDetails } from './Components/AddCityDetails';
+import { AddCountryDetails } from './Components/AddCountryDetails';
+import { Navbar } from "./Components/Navbar";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<TableComponent />} />
+        <Route path="/addcity" element={<AddCityDetails />} />
+        <Route path="/addcountry" element={<AddCountryDetails />} />
+      </Routes>
     </ChakraProvider>
   );
 }
